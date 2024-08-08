@@ -5,7 +5,7 @@ pipeline {
         }
 environment {
           TOMCAT_USER = 'ubuntu'
-          TOMCAT_HOST = 'http://18.61.162.108'
+          TOMCAT_HOST = '18.61.162.108'
           TOMCAT_PATH = '/home/ubuntu/tomcat/webapps'
 }
 stages {
@@ -30,6 +30,7 @@ stages {
         steps {
         sshagent(['ubuntu']) {
      sh "rsync -avz -e 'ssh -o StrictHostKeyChecking=no' --delete target/*.war ${TOMCAT_USER}@${TOMCAT_HOST}:${TOMCAT_PATH}"
+                    
 
                             }
             }
