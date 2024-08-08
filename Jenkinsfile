@@ -28,7 +28,7 @@ stages {
                             }
           stage('Deploy') {
         steps {
-        sshagent(['tomcat']) {
+        sshagent(['ubuntu']) {
       sh "rsync -avz -e 'ssh -o StrictHostKeyChecking=no' --delete target/*.war ${TOMCAT_USER}@${TOMCAT_HOST}:${TOMCAT_PATH}"
                             }
             }
