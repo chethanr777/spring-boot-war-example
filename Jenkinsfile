@@ -1,8 +1,8 @@
 pipeline {
             agent any
-  tools {
+  /*tools {
           maven 'maven'
-        }
+        } */
 environment {
           TOMCAT_USER = 'ubuntu'
           TOMCAT_HOST = 'http://18.61.162.108'
