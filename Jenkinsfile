@@ -5,7 +5,7 @@ pipeline {
     }
     environment {
         TOMCAT_USER = 'ubuntu'
-        TOMCAT_HOST = '18.61.162.108'
+        TOMCAT_HOST = '98.130.54.193'
         TOMCAT_PATH = '/home/ubuntu/tomcat/webapps'
     }
     stages {
